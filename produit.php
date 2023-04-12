@@ -1,13 +1,16 @@
 <?php 
+    include 'connexion.php';
+
     class Produits {
         private $reference;
         private $designation;
         private $prix;
         private $quantite_stock;
-    
+        
 
         public function __construct() {
-
+            $connexionObj = new connexion();
+            $this->cnx = $connexionObj;
         }
 
         public function getReference() {
@@ -59,7 +62,7 @@
         }
 
         public function delete() {
-            
+
         }
 
 
