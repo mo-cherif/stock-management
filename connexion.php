@@ -7,17 +7,17 @@
         public $mdp;
 
         public function __construct() {
-            $localhost = "localhost";
-            $database = "stock";
-            $username = "root";
-            $mdp = "";
+            $this->localhost = "localhost";
+            $this->database = "stock";
+            $this->username = "root";
+            $this->mdp = "";
         }
 
         public function getConnexion() {
             try {
-                $connexion = new PDO("mysql:host=$localhost;
-                dbname=$database",
-                $username, $mdp);
+                return new PDO("mysql:host=$this->localhost;
+                dbname=$this->database",
+                $this->username, $this->mdp);
 
             } catch(PDOEXCEPTION $e) {
                 return -1;
