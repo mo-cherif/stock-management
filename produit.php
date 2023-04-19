@@ -45,8 +45,9 @@
             $this->quantite_stock = $quantite_stock;
         }
 
-        public function create() {
-
+        public function create($r, $d, $p, $q) {
+            $insert = $this->cnx->prepare("INSERT INTO produits(reference, designation, reference, quantite_stock) VALUES (?,?,?,?)");
+            $insert-> execute([$r, $d, $p, $q]);
         }
 
         public function readOne() {
