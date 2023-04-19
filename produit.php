@@ -6,11 +6,11 @@
         private $designation;
         private $prix;
         private $quantite_stock;
-        
+        private $cnx;
 
         public function __construct() {
             $connexionObj = new connexion();
-            $this->cnx = $connexionObj;
+            $this->cnx = $connexionObj->getConnexion();
         }
 
         public function getReference() {
@@ -46,7 +46,8 @@
         }
 
         public function create($r, $d, $p, $q) {
-            $insert = $this->cnx->prepare("INSERT INTO produits(reference, designation, reference, quantite_stock) VALUES (?,?,?,?)");
+            
+            $insert = $this->cnx->prepare("INSERT INTO produits(reference, designation, prix,quantite_stock) VALUES (?,?,?,?)");
             $insert-> execute([$r, $d, $p, $q]);
         }
 
@@ -54,7 +55,7 @@
 
         }
         public function read() {
-
+           return $this->cnx->query('SELECT * FROM produits');
         }
 
 

@@ -15,9 +15,10 @@
 
         public function getConnexion() {
             try {
-                return new PDO("mysql:host=$this->localhost;
+               $t = new PDO("mysql:host=$this->localhost;
                 dbname=$this->database",
                 $this->username, $this->mdp);
+                return $t;
 
             } catch(PDOEXCEPTION $e) {
                 return -1;
