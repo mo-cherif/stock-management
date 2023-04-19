@@ -14,8 +14,17 @@
     </tr>
 
     <?php
-        while($ligne= $res->fetch(PDO:: FETCH_ASSOC)) {
-            echo $ligne["designation"];
-        } 
+        while($ligne= $listeProduits->fetch(PDO:: FETCH_ASSOC)) {
+           
+    ?>
+
+        <tr>
+            <td><?= $ligne['reference']?></td>
+            <td><?= $ligne['designation']?></td>
+            <td><?= $ligne['prix']?></td>
+            <td><?= $ligne['quantite_stock']?></td>
+        </tr>
+    <?php
+        }
     ?>
 </table>
