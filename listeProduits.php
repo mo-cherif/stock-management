@@ -1,9 +1,15 @@
 <?php 
     include 'produit.php';
-
     $prod = new Produits();
     $listeProduits = $prod->read();
 ?>
+
+<style>
+    table, th, td{
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+</style>
 
 <table>
     <tr>
@@ -23,6 +29,8 @@
             <td><?= $ligne['designation']?></td>
             <td><?= $ligne['prix']?></td>
             <td><?= $ligne['quantite_stock']?></td>
+            <td><a href="">Modifier</a></td>
+            <td><a href="">Supprimer</a></td>
         </tr>
     <?php
         }
