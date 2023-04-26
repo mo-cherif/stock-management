@@ -10,7 +10,14 @@
         case 'Ajouter':
             $prod = new Produits();
             $prod->create($ref, $des, $prix, $qtte);
-            include 'listeProduits.php';
+            header('location:listeProduits.php');
+        
+        case 'Supprimer':
+            $produit = new Produits();
+            $produit->delete($_GET['ref']);
+            header('location:listeProduits.php');
+            break;
+
     }
 
     $prod = new Produits();

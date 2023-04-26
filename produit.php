@@ -63,8 +63,8 @@
 
         }
 
-        public function delete() {
-
+        public function delete($r) {
+            $this->cnx->query("DELETE FROM produits WHERE reference= '$r'");
         }
 
 

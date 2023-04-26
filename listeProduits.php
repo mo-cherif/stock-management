@@ -29,8 +29,8 @@
             <td><?= $ligne['designation']?></td>
             <td><?= $ligne['prix']?></td>
             <td><?= $ligne['quantite_stock']?></td>
-            <td><a href="">Modifier</a></td>
-            <td><a href="">Supprimer</a></td>
+            <td><a href="traitement.php?ref=<?=$ligne["reference"]?>&operation=Modifier">Modifier</a></td>
+            <td><a href="traitement.php?ref=<?=$ligne["reference"]?>&operation=Supprimer">Supprimer</a></td>
         </tr>
     <?php
         }
