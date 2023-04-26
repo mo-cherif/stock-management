@@ -1,7 +1,7 @@
 <?php 
     include 'produit.php';
-    $ref = $_POST["des"];
-    $des = $_POST["ref"];
+    $ref = $_POST["ref"];
+    $des = $_POST["des"];
     $prix = $_POST["prix"];
     $qtte= $_POST["qtite"];
     $operation = $_REQUEST["operation"];
@@ -22,7 +22,7 @@
             break;
         case 'Modifier_un':
             $produit = new Produits();
-            $prod->update($ref, $des, $prix, $qtte);
+            $produit->update($ref, $des, $prix, $qtte);
             header("location:listeProduits.php");
             break;
 
