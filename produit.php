@@ -51,8 +51,8 @@
             $insert-> execute([$r, $d, $p, $q]);
         }
 
-        public function readOne() {
-            return $this->cnx->query("SELECT FROM produits WHERE reference= '$r'");
+        public function readOne($r) {
+            return $this->cnx->query("SELECT * FROM produits WHERE reference= '$r'");
         }
         public function read() {
            return $this->cnx->query('SELECT * FROM produits');

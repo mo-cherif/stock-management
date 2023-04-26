@@ -15,16 +15,13 @@
 ?>
 <body>
     <form action="traitement.php" method="post" >
-        <input type="text" name="ref" placeholder="reference" 
-        value="<?=$unProduit["reference"];?>">
-        <input type="text" name="des" placeholder="designation"
-        value="<?=$unProduit["designation"];?>>
-        <input type="text" name="prix" placeholder="prix"
-        value="<?=$unProduit["prix"];?>>
-        <input type="number" name="qtite" placeholder="quantite"
-        value="<?=$unProduit["quantite_stock"];?>>
+        <input type="text" name="ref" placeholder="reference" value="<?=$unProduit["reference"];?>">
+        <input type="text" name="des" placeholder="designation" value="<?=$unProduit["designation"];?>">
+        <input type="text" name="prix" placeholder="prix" value="<?=$unProduit["prix"];?>">
+        <input type="number" name="qtite" placeholder="quantite"value="<?=$unProduit["quantite_stock"];?>">
+
         <input type="submit">
-        <input type="hidden" value="Ajouter" name="operation">
+        <input type="hidden" value="Modifier" name="operation">
     </form>
 </body>
 </html>
