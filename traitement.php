@@ -20,8 +20,7 @@
 
     }
 
-    $prod = new Produits();
-    $prod->create($ref, $des, $prix, $qtte);
+
 
 
 ?>
