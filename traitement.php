@@ -18,7 +18,7 @@
             header('location:listeProduits.php');
             break;
         case 'Modifier':
-            header("location:listeProduits.php?ref=".$_GET['ref']);
+            header("location:formProduits.php?ref=".$_GET['ref']);
             break;
 
     }

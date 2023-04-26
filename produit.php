@@ -52,7 +52,7 @@
         }
 
         public function readOne() {
-
+            return $this->cnx->query("SELECT FROM produits WHERE reference= '$r'");
         }
         public function read() {
            return $this->cnx->query('SELECT * FROM produits');
