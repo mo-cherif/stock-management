@@ -21,7 +21,7 @@
         <input type="number" name="qtite" placeholder="quantite"value="<?=$unProduit["quantite_stock"];?>">
 
         <input type="submit">
-        <input type="hidden" value="Modifier" name="operation">
+        <input type="hidden" value="Modifier_un" name="operation">
     </form>
 </body>
 </html>

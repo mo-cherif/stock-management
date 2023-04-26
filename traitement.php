@@ -20,6 +20,11 @@
         case 'Modifier':
             header("location:formProduits.php?ref=".$_GET['ref']);
             break;
+        case 'Modifier_un':
+            $produit = new Produits();
+            $prod->update($ref, $des, $prix, $qtte);
+            header("location:listeProduits.php");
+            break;
 
     }
 

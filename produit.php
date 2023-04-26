@@ -58,9 +58,8 @@
            return $this->cnx->query('SELECT * FROM produits');
         }
 
-
-        public function update() {
-
+        public function update($r, $d, $p, $q) {
+            $this->cnx->query("UPDATE produits SET designation= '$d', prix=$p, quantite_stock=$q WHERE reference= '$r'");
         }
 
         public function delete($r) {
