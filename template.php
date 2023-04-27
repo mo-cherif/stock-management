@@ -2,4 +2,6 @@
 <?php
   echo 'hi'
     echo 'me'
+    $x = "hi"
+    
 ?>
